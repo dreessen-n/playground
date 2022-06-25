@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Playground</title>
     <style>
+        h1 {
+            text-align: center;
+        }
         .wrapper {
             display: flex;
             justify-content: center;
@@ -21,6 +24,7 @@
     </style>
 </head>
 <body>
+    <h1>Welcome!</h1>
     <div class="wrapper">
         {% for i in range(0, num) %}
         <div class="box" style="background-color: {{ color }};"></div>

@@ -2,9 +2,9 @@ from flask import Flask, render_template  # Import Flask to allow us to create o
 
 app = Flask(__name__)    # Create a new instance of the Flask class called "app"
 
-@app.route('/play')
-def play():
-    return render_template('index.html', num=3, color='aquamarine')
+@app.route('/play/<int:num>/<string:color>')
+def play(num, color):
+    return render_template('index.html', num=num, color=color)
 
 # Add in an error message for page not found - 404
 @app.errorhandler(404)
